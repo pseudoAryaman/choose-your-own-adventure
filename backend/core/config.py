@@ -17,5 +17,8 @@ class Settings(BaseSettings):
 
     class config:
         env_file = ".env"
+
         env_file_encoding = "UTF-8"
-        
+        case_sensitive = True
+#instansiate
+settings = Settings()
