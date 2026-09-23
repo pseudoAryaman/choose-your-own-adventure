@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from core.config import settings
 app = FastAPI(
     title = "Choose your own story API",
     description = "api to genreate cool stories",
@@ -10,7 +11,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins = ["*"],
+    allow_origins = settings.ALLOWED_ORIGIN,
     allow_credentials = True,
     allow_methods = ["*"], #get, put, post, delete
     allow_headers = ["*"],
