@@ -7,7 +7,8 @@ from sqlalchemy import Column, Integer, String, DateTime,Boolean,ForeignKey,JSON
 from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
 from db.database import Base
-
+#why import base because that is the only way to tell python that we have to consider this as schema 
+#else compiler will take it as a normal class
 
 class Story(Base):
     __tablename__ = "stories"
