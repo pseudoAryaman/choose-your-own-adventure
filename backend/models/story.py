@@ -22,12 +22,12 @@ class StoryNode(Base):
     __tablename__ = "story_nodes"
 
     id = Column(Integer,primary_key=True, index = True)
-    Story_id = Column(Integer, ForeignKey("stories.id"),index = True)
+    story_id = Column(Integer, ForeignKey("stories.id"),index = True)
     content = Column(String)
     is_root = Column(Boolean,default=False)
     is_ending = Column(Boolean,default=False)
     is_winning = Column(Boolean,default=False)
     options = Column(JSON,default=list)
     
-    Story = relationship("Story", back_populates="nodes")
+    story = relationship("Story", back_populates="nodes")
     
