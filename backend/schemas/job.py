@@ -6,7 +6,7 @@ class StoryJobBase(BaseModel):
     theme : str
 
 class StoryJobresponse(BaseModel):
-    job_id: int
+    job_id: str
     status: str
     created_at: datetime
     story_id: Optional[int] = None
